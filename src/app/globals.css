@@ -1,26 +1,47 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import 'tailwindcss';
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* pine — verde azulado muy oscuro, base de fondos */
+  --color-pine-950: oklch(0.19 0.03 172);
+  --color-pine-900: oklch(0.23 0.035 172);
+  --color-pine-800: oklch(0.28 0.04 172);
+  --color-pine-700: oklch(0.34 0.045 172);
+
+  /* moss — verde teal medio, línea de poligonal / estructura */
+  --color-moss-600: oklch(0.47 0.09 165);
+  --color-moss-500: oklch(0.56 0.1 165);
+  --color-moss-400: oklch(0.66 0.11 165);
+
+  /* fern — verde claro, resaltes y estados positivos */
+  --color-fern-400: oklch(0.75 0.12 162);
+  --color-fern-300: oklch(0.82 0.1 162);
+
+  /* coral — acento cálido, puntos de referencia / foco */
+  --color-coral-700: oklch(0.38 0.09 35);
+  --color-coral-600: oklch(0.52 0.13 35);
+  --color-coral-500: oklch(0.68 0.15 35);
+  --color-coral-400: oklch(0.78 0.12 35);
+
+  /* bone — blancos cálidos, texto sobre fondo oscuro */
+  --color-bone-100: oklch(0.97 0.01 90);
+  --color-bone-50: oklch(0.99 0.005 90);
+
+  /* ash — grises neutros para texto secundario y bordes */
+  --color-ash-600: oklch(0.42 0.01 172);
+  --color-ash-500: oklch(0.55 0.012 172);
+  --color-ash-400: oklch(0.68 0.012 172);
+  --color-ash-300: oklch(0.8 0.01 172);
+
+  --font-sans: var(--font-poppins), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-pine-950);
+  color: var(--color-bone-100);
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
